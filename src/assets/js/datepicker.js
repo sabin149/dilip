@@ -5,13 +5,13 @@
 var NepaliFunctions = (function () {
   "use strict";
   var e = [
-      "MM-DD-YYYY",
-      "MM/DD/YYYY",
-      "YYYY-MM-DD",
-      "YYYY/MM/DD",
-      "DD-MM-YYYY",
-      "DD/MM/YYYY",
-    ],
+    "MM-DD-YYYY",
+    "MM/DD/YYYY",
+    "YYYY-MM-DD",
+    "YYYY/MM/DD",
+    "DD-MM-YYYY",
+    "DD/MM/YYYY",
+  ],
     t = "YYYY-MM-DD",
     n = "MM/DD/YYYY";
   function r() {
@@ -181,7 +181,7 @@ var NepaliFunctions = (function () {
       );
     }
     function c(t, n) {
-      for (t.day += n; t.day > e[t.year][t.month - 1]; )
+      for (t.day += n; t.day > e[t.year][t.month - 1];)
         (t.day -= e[t.year][t.month - 1]),
           (t.month += 1),
           t.month > 12 && ((t.month = 1), (t.year += 1));
@@ -375,14 +375,14 @@ var NepaliFunctions = (function () {
       isNaN(e) || e < 0 || e > 6
         ? null
         : [
-            "आइतवार",
-            "सोमवार",
-            "मङ्गलवार",
-            "बुधवार",
-            "बिहिवार",
-            "शुक्रवार",
-            "शनिवार",
-          ][Number(e)]
+          "आइतवार",
+          "सोमवार",
+          "मङ्गलवार",
+          "बुधवार",
+          "बिहिवार",
+          "शुक्रवार",
+          "शनिवार",
+        ][Number(e)]
     );
   }
   function g() {
@@ -405,14 +405,14 @@ var NepaliFunctions = (function () {
       isNaN(e) || e < 0 || e > 6
         ? null
         : [
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-          ][Number(e)]
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ][Number(e)]
     );
   }
   function A() {
@@ -485,8 +485,8 @@ var NepaliFunctions = (function () {
           n > 0 && n > 999
             ? (a.year = !0)
             : n > 0 && n > 12
-            ? (a.day = !0)
-            : n > 0 && n <= 12 && ((a.month = !0), (a.day = !0)),
+              ? (a.day = !0)
+              : n > 0 && n <= 12 && ((a.month = !0), (a.day = !0)),
             r.push(a);
         });
         var a = r.filter(function (e) {
@@ -495,8 +495,8 @@ var NepaliFunctions = (function () {
         if (a) {
           (t.year = a.value), (n[a.index] = "YYYY");
           var i = r.filter(function (e) {
-              return 1 == e.day;
-            }),
+            return 1 == e.day;
+          }),
             o = r.filter(function (e) {
               return 1 == e.month;
             });
@@ -506,12 +506,12 @@ var NepaliFunctions = (function () {
               1 == i.length
                 ? ((t.day = i[0].value), (n[i[0].index] = "DD"))
                 : ((i = i.find(function (e) {
-                    return !e.month;
-                  })),
+                  return !e.month;
+                })),
                   (t.day = i.value),
                   (n[i.index] = "DD")))
             : 2 == o.length &&
-              ((t.day = o[0 == a.index ? 1 : 0].value),
+            ((t.day = o[0 == a.index ? 1 : 0].value),
               (t.month = o[0 == a.index ? 0 : 1].value),
               (n[o[0].index] = 0 == a.index ? "MM" : "DD"),
               (n[o[1].index] = 0 == a.index ? "DD" : "MM"));
@@ -591,19 +591,19 @@ var NepaliFunctions = (function () {
         isNaN(e) || e < 0 || e > 11
           ? null
           : [
-              "January",
-              "February",
-              "March",
-              "April",
-              "May",
-              "June",
-              "July",
-              "August",
-              "September",
-              "October",
-              "November",
-              "December",
-            ][e]
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+          ][e]
       );
     },
     GetBsMonths: p,
@@ -613,19 +613,19 @@ var NepaliFunctions = (function () {
         isNaN(e) || e < 0 || e > 11
           ? null
           : [
-              "Baisakh",
-              "Jestha",
-              "Ashar",
-              "Shrawan",
-              "Bhadra",
-              "Ashoj",
-              "Kartik",
-              "Mangsir",
-              "Poush",
-              "Magh",
-              "Falgun",
-              "Chaitra",
-            ][e]
+            "Baisakh",
+            "Jestha",
+            "Ashar",
+            "Shrawan",
+            "Bhadra",
+            "Ashoj",
+            "Kartik",
+            "Mangsir",
+            "Poush",
+            "Magh",
+            "Falgun",
+            "Chaitra",
+          ][e]
       );
     },
     GetBsDaysUnicode: v,
@@ -657,19 +657,19 @@ var NepaliFunctions = (function () {
         isNaN(e) || e < 0 || e > 11
           ? null
           : [
-              "बैशाख",
-              "जेठ",
-              "अषाढ",
-              "श्रावण",
-              "भाद्र",
-              "आश्विन",
-              "कार्तिक",
-              "मङ्सिर",
-              "पौष",
-              "माघ",
-              "फाल्गुन",
-              "चैत्र",
-            ][e]
+            "बैशाख",
+            "जेठ",
+            "अषाढ",
+            "श्रावण",
+            "भाद्र",
+            "आश्विन",
+            "कार्तिक",
+            "मङ्सिर",
+            "पौष",
+            "माघ",
+            "फाल्गुन",
+            "चैत्र",
+          ][e]
       );
     },
     GetDaysInAdMonth: function (e, t) {
@@ -684,11 +684,11 @@ var NepaliFunctions = (function () {
     BsDatesDiff: function (e, t, n) {
       return (e = i(e, (n = a(n)))) && (t = i(t, n))
         ? !(!c(e) || !c(t)) &&
-            ((e = o(e)),
-            (t = o(t)),
-            (e = s(e)),
-            (t = s(t)),
-            new r().countAdDays(e, t))
+        ((e = o(e)),
+          (t = o(t)),
+          (e = s(e)),
+          (t = s(t)),
+          new r().countAdDays(e, t))
         : null;
     },
     BsAddDays: function (e, t, n) {
@@ -713,34 +713,34 @@ var NepaliFunctions = (function () {
       return (
         t
           ? ((r = [
-              "बैशाख",
-              "जेठ",
-              "अषाढ",
-              "श्रावण",
-              "भाद्र",
-              "आश्विन",
-              "कार्तिक",
-              "मङ्सिर",
-              "पौष",
-              "माघ",
-              "फाल्गुन",
-              "चैत्र",
-            ]),
+            "बैशाख",
+            "जेठ",
+            "अषाढ",
+            "श्रावण",
+            "भाद्र",
+            "आश्विन",
+            "कार्तिक",
+            "मङ्सिर",
+            "पौष",
+            "माघ",
+            "फाल्गुन",
+            "चैत्र",
+          ]),
             (a = `${B(e.day)} ${r[e.month - 1]} ${B(e.year)}`))
           : ((r = [
-              "Baisakh",
-              "Jestha",
-              "Ashar",
-              "Shrawan",
-              "Bhadra",
-              "Ashoj",
-              "Kartik",
-              "Mangsir",
-              "Poush",
-              "Magh",
-              "Falgun",
-              "Chaitra",
-            ]),
+            "Baisakh",
+            "Jestha",
+            "Ashar",
+            "Shrawan",
+            "Bhadra",
+            "Ashoj",
+            "Kartik",
+            "Mangsir",
+            "Poush",
+            "Magh",
+            "Falgun",
+            "Chaitra",
+          ]),
             (a = `${e.day} ${r[e.month - 1]} ${e.year}`)),
         a
       );
@@ -794,7 +794,7 @@ var NepaliFunctions = (function () {
         }
       }
       e = e.toString();
-      for (var n = "", r = 0; r < e.length; ) (n += t(e[r])), r++;
+      for (var n = "", r = 0; r < e.length;) (n += t(e[r])), r++;
       return parseFloat(n);
     },
     NumberToWords: function (e, t) {
@@ -824,49 +824,49 @@ var NepaliFunctions = (function () {
       var m = Math.floor(e % 1e13);
       function f(e) {
         var t = {
-            0: "",
-            1: "One",
-            2: "Two",
-            3: "Three",
-            4: "Four",
-            5: "Five",
-            6: "Six",
-            7: "Seven",
-            8: "Eight",
-            9: "Nine",
-            10: "Ten",
-            11: "Eleven",
-            12: "Twelve",
-            13: "Thirteen",
-            14: "Fourteen",
-            15: "Fifteen",
-            16: "Sixteen",
-            17: "Seventeen",
-            18: "Eighteen",
-            19: "Nineteen",
-            20: "Twenty",
-            30: "Thirty",
-            40: "Forty",
-            50: "Fifty",
-            60: "Sixty",
-            70: "Seventy",
-            80: "Eighty",
-            90: "Ninety",
-          },
+          0: "",
+          1: "One",
+          2: "Two",
+          3: "Three",
+          4: "Four",
+          5: "Five",
+          6: "Six",
+          7: "Seven",
+          8: "Eight",
+          9: "Nine",
+          10: "Ten",
+          11: "Eleven",
+          12: "Twelve",
+          13: "Thirteen",
+          14: "Fourteen",
+          15: "Fifteen",
+          16: "Sixteen",
+          17: "Seventeen",
+          18: "Eighteen",
+          19: "Nineteen",
+          20: "Twenty",
+          30: "Thirty",
+          40: "Forty",
+          50: "Fifty",
+          60: "Sixty",
+          70: "Seventy",
+          80: "Eighty",
+          90: "Ninety",
+        },
           n = (e = Number(e)).toString();
         return e < 20 ? t[e] : t[10 * n[0]] + " " + t[n[1]];
       }
       for (
         (m = (m = m.toString()).substring(0, m.length - 11)) > 0 &&
-          (n += f(m) + " Kharab"),
-          c > 0 && (n += " " + f(c) + " Arab"),
-          s > 0 && (n += " " + f(s) + " Crore"),
-          l > 0 && (n += " " + f(l) + " Lakh"),
-          d > 0 && (n += " " + f(d) + " Thousand"),
-          u > 0 && (n += " " + f(u) + " Hundred"),
-          o > 0 && (n += " " + f(o)),
-          "" != n.trim() && t && (n += " Rupees"),
-          r > 0 && t && (n += " and " + f(r) + " Paisa");
+        (n += f(m) + " Kharab"),
+        c > 0 && (n += " " + f(c) + " Arab"),
+        s > 0 && (n += " " + f(s) + " Crore"),
+        l > 0 && (n += " " + f(l) + " Lakh"),
+        d > 0 && (n += " " + f(d) + " Thousand"),
+        u > 0 && (n += " " + f(u) + " Hundred"),
+        o > 0 && (n += " " + f(o)),
+        "" != n.trim() && t && (n += " Rupees"),
+        r > 0 && t && (n += " and " + f(r) + " Paisa");
         n.indexOf("  ") > -1;
 
       )
@@ -877,107 +877,107 @@ var NepaliFunctions = (function () {
       if (((e = e || 0), isNaN(e) || Math.floor(e).toString().length > 13))
         return null;
       var n = [
-          "सुन्य",
-          "एक",
-          "दुई",
-          "तीन",
-          "चार",
-          "पाँच",
-          "छ",
-          "सात",
-          "आठ",
-          "नौ",
-          "दस",
-          "एघार",
-          "बाह्र",
-          "तेह्र",
-          "चौध",
-          "पन्ध्र",
-          "सोह्र",
-          "सत्र",
-          "अठाह्र",
-          "उन्नाइस",
-          "बीस",
-          "एकाइस",
-          "बाइस",
-          "तेइस",
-          "चौबीस",
-          "पचीस",
-          "छब्बीस",
-          "सत्ताइस",
-          "अठ्ठाइस",
-          "उनन्तीस",
-          "तीस",
-          "एकतीस",
-          "बतीस",
-          "तेतीस",
-          "चौतीस",
-          "पैतीस",
-          "छतीस",
-          "सरतीस",
-          "अरतीस",
-          "उननचालीस",
-          "चालीस",
-          "एकचालीस",
-          "बयालिस",
-          "तीरचालीस",
-          "चौवालिस",
-          "पैंतालिस",
-          "छयालिस",
-          "सरचालीस",
-          "अरचालीस",
-          "उननचास",
-          "पचास",
-          "एकाउन्न",
-          "बाउन्न",
-          "त्रिपन्न",
-          "चौवन्न",
-          "पच्पन्न",
-          "छपन्न",
-          "सन्ताउन्न",
-          "अन्ठाउँन्न",
-          "उनान्न्साठी ",
-          "साठी",
-          "एकसाठी",
-          "बासाठी",
-          "तीरसाठी",
-          "चौंसाठी",
-          "पैसाठी",
-          "छैसठी",
-          "सत्सठ्ठी",
-          "अर्सठ्ठी",
-          "उनन्सत्तरी",
-          "सतरी",
-          "एकहत्तर",
-          "बहत्तर",
-          "त्रिहत्तर",
-          "चौहत्तर",
-          "पचहत्तर",
-          "छहत्तर",
-          "सत्हत्तर",
-          "अठ्हत्तर",
-          "उनास्सी",
-          "अस्सी",
-          "एकासी",
-          "बयासी",
-          "त्रीयासी",
-          "चौरासी",
-          "पचासी",
-          "छयासी",
-          "सतासी",
-          "अठासी",
-          "उनान्नब्बे",
-          "नब्बे",
-          "एकान्नब्बे",
-          "बयान्नब्बे",
-          "त्रियान्नब्बे",
-          "चौरान्नब्बे",
-          "पंचान्नब्बे",
-          "छयान्नब्बे",
-          "सन्तान्‍नब्बे",
-          "अन्ठान्नब्बे",
-          "उनान्सय",
-        ],
+        "सुन्य",
+        "एक",
+        "दुई",
+        "तीन",
+        "चार",
+        "पाँच",
+        "छ",
+        "सात",
+        "आठ",
+        "नौ",
+        "दस",
+        "एघार",
+        "बाह्र",
+        "तेह्र",
+        "चौध",
+        "पन्ध्र",
+        "सोह्र",
+        "सत्र",
+        "अठाह्र",
+        "उन्नाइस",
+        "बीस",
+        "एकाइस",
+        "बाइस",
+        "तेइस",
+        "चौबीस",
+        "पचीस",
+        "छब्बीस",
+        "सत्ताइस",
+        "अठ्ठाइस",
+        "उनन्तीस",
+        "तीस",
+        "एकतीस",
+        "बतीस",
+        "तेतीस",
+        "चौतीस",
+        "पैतीस",
+        "छतीस",
+        "सरतीस",
+        "अरतीस",
+        "उननचालीस",
+        "चालीस",
+        "एकचालीस",
+        "बयालिस",
+        "तीरचालीस",
+        "चौवालिस",
+        "पैंतालिस",
+        "छयालिस",
+        "सरचालीस",
+        "अरचालीस",
+        "उननचास",
+        "पचास",
+        "एकाउन्न",
+        "बाउन्न",
+        "त्रिपन्न",
+        "चौवन्न",
+        "पच्पन्न",
+        "छपन्न",
+        "सन्ताउन्न",
+        "अन्ठाउँन्न",
+        "उनान्न्साठी ",
+        "साठी",
+        "एकसाठी",
+        "बासाठी",
+        "तीरसाठी",
+        "चौंसाठी",
+        "पैसाठी",
+        "छैसठी",
+        "सत्सठ्ठी",
+        "अर्सठ्ठी",
+        "उनन्सत्तरी",
+        "सतरी",
+        "एकहत्तर",
+        "बहत्तर",
+        "त्रिहत्तर",
+        "चौहत्तर",
+        "पचहत्तर",
+        "छहत्तर",
+        "सत्हत्तर",
+        "अठ्हत्तर",
+        "उनास्सी",
+        "अस्सी",
+        "एकासी",
+        "बयासी",
+        "त्रीयासी",
+        "चौरासी",
+        "पचासी",
+        "छयासी",
+        "सतासी",
+        "अठासी",
+        "उनान्नब्बे",
+        "नब्बे",
+        "एकान्नब्बे",
+        "बयान्नब्बे",
+        "त्रियान्नब्बे",
+        "चौरान्नब्बे",
+        "पंचान्नब्बे",
+        "छयान्नब्बे",
+        "सन्तान्‍नब्बे",
+        "अन्ठान्नब्बे",
+        "उनान्सय",
+      ],
         r = "",
         a = 0,
         i = "";
@@ -1006,7 +1006,7 @@ var NepaliFunctions = (function () {
         var h = Math.floor(e % 1e13);
         return (
           (h = (h = h.toString()).substring(0, h.length - 11)) > 0 &&
-            (r += n[h] + " खरब"),
+          (r += n[h] + " खरब"),
           f > 0 && (r += " " + n[f] + " अरब"),
           m > 0 && (r += " " + n[m] + " करोड"),
           c > 0 && (r += " " + n[c] + " लाख"),
@@ -1063,8 +1063,8 @@ var NepaliFunctions = (function () {
         ? (s = NepaliFunctions.ConvertToDateObject(l, n.dateFormat))
         : ((s = NepaliFunctions.GetCurrentBsDate()),
           n.disableAfter &&
-            NepaliFunctions.CompareBsDates(s, n.disableAfter) &&
-            (s = n.disableAfter));
+          NepaliFunctions.CompareBsDates(s, n.disableAfter) &&
+          (s = n.disableAfter));
       var c = null;
       null == s
         ? ((s = NepaliFunctions.GetCurrentBsDate()), (c = ""))
@@ -1072,26 +1072,26 @@ var NepaliFunctions = (function () {
         d(s.year, s.month, c),
         (function (e) {
           var t = (function (e) {
-              if ("body" != m().container) {
-                var t = e.getBoundingClientRect();
-                return { x: t.x, y: t.y };
-              }
-              var n = 0,
-                r = 0;
-              return (
-                (n += (function (e) {
-                  var t = 0;
-                  for (; e; ) (t += e.offsetLeft), (e = e.offsetParent);
-                  return (t += document.firstChild.offsetLeft || 0);
-                })(e)),
-                (r += (function (e) {
-                  var t = 0;
-                  for (; e; ) (t += e.offsetTop), (e = e.offsetParent);
-                  return (t += document.firstChild.offsetTop || 0);
-                })(e)),
-                { x: n, y: r }
-              );
-            })(e),
+            if ("body" != m().container) {
+              var t = e.getBoundingClientRect();
+              return { x: t.x, y: t.y };
+            }
+            var n = 0,
+              r = 0;
+            return (
+              (n += (function (e) {
+                var t = 0;
+                for (; e;) (t += e.offsetLeft), (e = e.offsetParent);
+                return (t += document.firstChild.offsetLeft || 0);
+              })(e)),
+              (r += (function (e) {
+                var t = 0;
+                for (; e;) (t += e.offsetTop), (e = e.offsetParent);
+                return (t += document.firstChild.offsetTop || 0);
+              })(e)),
+              { x: n, y: r }
+            );
+          })(e),
             n = (function (e) {
               var t =
                 window.pageYOffset ||
@@ -1145,15 +1145,15 @@ var NepaliFunctions = (function () {
       o.ndpMonth && o.ndpYear
         ? (p.appendChild(s(t, e, n, r)), p.appendChild(c(t, e, h, n, r)))
         : o.ndpMonth
-        ? (p.appendChild(s(t, e, n, r)), p.appendChild(y), p.appendChild(b))
-        : o.ndpYear
-        ? (p.appendChild(v), p.appendChild(y), p.appendChild(c(t, e, h, n, r)))
-        : (p.appendChild(v), p.appendChild(y), p.appendChild(b));
+          ? (p.appendChild(s(t, e, n, r)), p.appendChild(y), p.appendChild(b))
+          : o.ndpYear
+            ? (p.appendChild(v), p.appendChild(y), p.appendChild(c(t, e, h, n, r)))
+            : (p.appendChild(v), p.appendChild(y), p.appendChild(b));
     var g = (function (e, t) {
-        var n = e,
-          r = t + 1;
-        return r > 12 && ((n += 1), (r = 1)), { year: n, month: r };
-      })(e, t),
+      var n = e,
+        r = t + 1;
+      return r > 12 && ((n += 1), (r = 1)), { year: n, month: r };
+    })(e, t),
       D = (function (e, t) {
         var n = e,
           r = t - 1;
@@ -1185,9 +1185,9 @@ var NepaliFunctions = (function () {
       S.setAttribute("href", "javascript:void(0)"),
       S.appendChild(E),
       T &&
-        S.addEventListener("click", function () {
-          d(M, B, n, r);
-        });
+      S.addEventListener("click", function () {
+        d(M, B, n, r);
+      });
     var I = !0;
     o.disableAfter &&
       NepaliFunctions.CompareBsDates(
@@ -1204,9 +1204,9 @@ var NepaliFunctions = (function () {
       w.setAttribute("href", "javascript:void(0)"),
       w.appendChild(x),
       I &&
-        w.addEventListener("click", function () {
-          d(N, A, n, r);
-        }),
+      w.addEventListener("click", function () {
+        d(N, A, n, r);
+      }),
       Y.insertBefore(S, Y.firstChild),
       Y.appendChild(w),
       i.getElementsByTagName("table")[0].insertAdjacentElement(
@@ -1270,35 +1270,35 @@ var NepaliFunctions = (function () {
             S = document.createElement("TR"),
             I = document.createElement("TD"),
             x = document.createElement("A");
-          for (; B < Y; ) {
+          for (; B < Y;) {
             if (
               ((M = B) % 7 == 0 && (S = document.createElement("TR")),
-              (T = M - A + 1),
-              (F =
-                e.toString() +
-                "-" +
-                NepaliFunctions.Get2DigitNo(t) +
-                "-" +
-                NepaliFunctions.Get2DigitNo(T)),
-              (C = ""),
-              (C =
-                e === a && t === i && T === o
-                  ? "ndp-selected"
-                  : e === f && t === h && T === p
-                  ? "ndp-current"
-                  : "ndp-date"),
-              u.isDiv && !u.onDateClick && (C += " ndp-link-disabled"),
-              M < A)
+                (T = M - A + 1),
+                (F =
+                  e.toString() +
+                  "-" +
+                  NepaliFunctions.Get2DigitNo(t) +
+                  "-" +
+                  NepaliFunctions.Get2DigitNo(T)),
+                (C = ""),
+                (C =
+                  e === a && t === i && T === o
+                    ? "ndp-selected"
+                    : e === f && t === h && T === p
+                      ? "ndp-current"
+                      : "ndp-date"),
+                u.isDiv && !u.onDateClick && (C += " ndp-link-disabled"),
+                M < A)
             )
               (I = document.createElement("TD")), S.appendChild(I);
             else {
               if (
                 ((I = document.createElement("TD")).setAttribute("class", C),
-                (u.disableAfter &&
-                  NepaliFunctions.CompareBsDates(
-                    NepaliFunctions.ConvertToDateObject(F, "YYYY-MM-DD"),
-                    u.disableAfter
-                  )) ||
+                  (u.disableAfter &&
+                    NepaliFunctions.CompareBsDates(
+                      NepaliFunctions.ConvertToDateObject(F, "YYYY-MM-DD"),
+                      u.disableAfter
+                    )) ||
                   (u.disableBefore &&
                     NepaliFunctions.CompareBsDates(
                       u.disableBefore,
@@ -1325,27 +1325,27 @@ var NepaliFunctions = (function () {
                   (x.innerHTML = d ? T : NepaliFunctions.ConvertToUnicode(T)),
                   u.isDiv && u.isDiv
                     ? u.onDateClick &&
-                      x.addEventListener("click", function () {
-                        var e = this.getAttribute("data-value"),
-                          t = NepaliFunctions.ConvertToDateObject(
-                            e,
-                            "YYYY-MM-DD"
-                          );
-                        u.onDateClick({
-                          bs: NepaliFunctions.ConvertDateFormat(
-                            t,
-                            "YYYY-MM-DD"
-                          ),
-                          ad: NepaliFunctions.ConvertDateFormat(
-                            NepaliFunctions.BS2AD(t),
-                            u.dateFormat
-                          ),
-                          object: t,
-                        });
-                      })
+                    x.addEventListener("click", function () {
+                      var e = this.getAttribute("data-value"),
+                        t = NepaliFunctions.ConvertToDateObject(
+                          e,
+                          "YYYY-MM-DD"
+                        );
+                      u.onDateClick({
+                        bs: NepaliFunctions.ConvertDateFormat(
+                          t,
+                          "YYYY-MM-DD"
+                        ),
+                        ad: NepaliFunctions.ConvertDateFormat(
+                          NepaliFunctions.BS2AD(t),
+                          u.dateFormat
+                        ),
+                        object: t,
+                      });
+                    })
                     : x.addEventListener("click", function () {
-                        l(this);
-                      }),
+                      l(this);
+                    }),
                   I.appendChild(x);
               }
               S.appendChild(I);
@@ -1374,14 +1374,14 @@ var NepaliFunctions = (function () {
           ? NepaliFunctions.ConvertToUnicode(t)
           : t),
         n.onChange &&
-          n.onChange({
-            bs: t,
-            ad: NepaliFunctions.ConvertDateFormat(
-              NepaliFunctions.BS2AD(a),
-              n.dateFormat
-            ),
-            object: a,
-          }),
+        n.onChange({
+          bs: t,
+          ad: NepaliFunctions.ConvertDateFormat(
+            NepaliFunctions.BS2AD(a),
+            n.dateFormat
+          ),
+          object: a,
+        }),
         o();
     }
   }
@@ -1395,8 +1395,8 @@ var NepaliFunctions = (function () {
     i.disableBefore && i.disableBefore.year == t && (u = i.disableBefore.month),
       i.disableAfter && i.disableAfter.year == t && (l = i.disableAfter.month);
     var s = o
-        ? NepaliFunctions.GetBsMonths()
-        : NepaliFunctions.GetBsMonthsInUnicode(),
+      ? NepaliFunctions.GetBsMonths()
+      : NepaliFunctions.GetBsMonthsInUnicode(),
       c = document.createElement("SELECT");
     return (
       c.setAttribute("id", "ndp-month-select" + a),
@@ -1439,13 +1439,13 @@ var NepaliFunctions = (function () {
     c.setAttribute("id", "ndp-year-select" + i);
     for (
       var f =
-          Math.round(n / 2) > 0 && parseInt(t) - Math.round(n / 2) >= l
-            ? parseInt(t) - Math.round(n / 2)
-            : l,
-        h =
-          Math.round(n / 2) > 0 && parseInt(t) + Math.round(n / 2) <= s
-            ? parseInt(t) + Math.round(n / 2)
-            : s;
+        Math.round(n / 2) > 0 && parseInt(t) - Math.round(n / 2) >= l
+          ? parseInt(t) - Math.round(n / 2)
+          : l,
+      h =
+        Math.round(n / 2) > 0 && parseInt(t) + Math.round(n / 2) <= s
+          ? parseInt(t) + Math.round(n / 2)
+          : s;
       f <= h;
 
     ) {
@@ -1496,34 +1496,34 @@ var NepaliFunctions = (function () {
           -1 * d
         )),
         Number.isInteger(l) &&
-          l >= 0 &&
-          (u = NepaliFunctions.BsAddDays(
-            NepaliFunctions.GetCurrentBsDate(),
-            l
-          )),
+        l >= 0 &&
+        (u = NepaliFunctions.BsAddDays(
+          NepaliFunctions.GetCurrentBsDate(),
+          l
+        )),
         a &&
-          (t = {
-            ndpTriggerButton: a.ndpTriggerButton || null,
-            ndpTriggerButtonClass: a.ndpTriggerButtonClass || null,
-            ndpTriggerButtonText: a.ndpTriggerButtonText || null,
-            ndpEnglishInput: a.ndpEnglishInput || null,
-            ndpYearCount: a.ndpYearCount || null,
-            ndpYear: a.ndpYear || null,
-            ndpMonth: a.ndpMonth || null,
-            disableDaysBefore: d,
-            disableDaysAfter: l,
-            disableBefore: o,
-            disableAfter: u,
-            dateFormat: i,
-            onChange: a.onChange || null,
-            unicodeDate: a.unicodeDate || null,
-            readOnlyInput: a.readOnlyInput || !1,
-            container: a.container || "body",
-            language: a.language || "nepali",
-            id: a.id || null,
-            isDiv: a.isDiv || !1,
-            onDateClick: a.onDateClick,
-          });
+        (t = {
+          ndpTriggerButton: a.ndpTriggerButton || null,
+          ndpTriggerButtonClass: a.ndpTriggerButtonClass || null,
+          ndpTriggerButtonText: a.ndpTriggerButtonText || null,
+          ndpEnglishInput: a.ndpEnglishInput || null,
+          ndpYearCount: a.ndpYearCount || null,
+          ndpYear: a.ndpYear || null,
+          ndpMonth: a.ndpMonth || null,
+          disableDaysBefore: d,
+          disableDaysAfter: l,
+          disableBefore: o,
+          disableAfter: u,
+          dateFormat: i,
+          onChange: a.onChange || null,
+          unicodeDate: a.unicodeDate || null,
+          readOnlyInput: a.readOnlyInput || !1,
+          container: a.container || "body",
+          language: a.language || "nepali",
+          id: a.id || null,
+          isDiv: a.isDiv || !1,
+          onDateClick: a.onDateClick,
+        });
     }
     return t;
   }
@@ -1614,15 +1614,15 @@ var NepaliFunctions = (function () {
       } else
         "DIV" == e.tagName &&
           (removeClass(e, "ndp-nepali-calendar"),
-          removeClass(e, "ndp-nepali-calendar-div"),
-          (e.innerHTML = ""));
+            removeClass(e, "ndp-nepali-calendar-div"),
+            (e.innerHTML = ""));
     }
     function b() {
       var n = document.getElementById(r),
         a = document.activeElement,
         i = n == a,
         u = (function (e, t) {
-          for (var n = !1; e; )
+          for (var n = !1; e;)
             e.getAttribute("id") == t && ((n = !0), (e = null)),
               (e = e ? e.offsetParent : null);
           return n;
@@ -1636,8 +1636,8 @@ var NepaliFunctions = (function () {
     }
     function g(e, t) {
       var r = (function (e) {
-          return "input" === e.tagName.toLowerCase();
-        })(e),
+        return "input" === e.tagName.toLowerCase();
+      })(e),
         a = e.getAttribute("id");
       if (null == a) {
         var i = (a = btoa(new Date().toISOString() + Math.random()));
@@ -1645,39 +1645,39 @@ var NepaliFunctions = (function () {
       }
       if (
         ((t.id = a),
-        e.classList.add("ndp-nepali-calendar"),
-        (function (e, t) {
-          var r = e.getAttribute("id");
-          if (
-            ((n[r] = t),
-            (n[r].raw = (function (e) {
-              if (null == e || "object" != typeof e) return e;
-              var t = e.constructor();
-              for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n]);
-              return t;
-            })(t)),
-            e?.value)
-          ) {
-            var a = NepaliFunctions.ParseDate(e.value);
-            a &&
-              a.parsedFormat &&
-              (t.dateFormat = t.dateFormat ? t.dateFormat : a.parsedFormat);
-          }
-        })(e, t),
-        r)
+          e.classList.add("ndp-nepali-calendar"),
+          (function (e, t) {
+            var r = e.getAttribute("id");
+            if (
+              ((n[r] = t),
+                (n[r].raw = (function (e) {
+                  if (null == e || "object" != typeof e) return e;
+                  var t = e.constructor();
+                  for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n]);
+                  return t;
+                })(t)),
+                e?.value)
+            ) {
+              var a = NepaliFunctions.ParseDate(e.value);
+              a &&
+                a.parsedFormat &&
+                (t.dateFormat = t.dateFormat ? t.dateFormat : a.parsedFormat);
+            }
+          })(e, t),
+          r)
       ) {
         if (
           (t.ndpTriggerButton || e.addEventListener("focus", f),
-          e.addEventListener("blur", b),
-          e.setAttribute("autocomplete", "off"),
-          e.addEventListener("keydown", h),
-          t.readOnlyInput && e.setAttribute("readonly", "readonly"),
-          t.ndpTriggerButton)
+            e.addEventListener("blur", b),
+            e.setAttribute("autocomplete", "off"),
+            e.addEventListener("keydown", h),
+            t.readOnlyInput && e.setAttribute("readonly", "readonly"),
+            t.ndpTriggerButton)
         ) {
           var l =
-              t.ndpTriggerButtonClass && "" !== t.ndpTriggerButtonClass
-                ? t.ndpTriggerButtonClass
-                : "",
+            t.ndpTriggerButtonClass && "" !== t.ndpTriggerButtonClass
+              ? t.ndpTriggerButtonClass
+              : "",
             s =
               t.ndpTriggerButtonText && "" !== t.ndpTriggerButtonText
                 ? t.ndpTriggerButtonText
@@ -1711,7 +1711,7 @@ var NepaliFunctions = (function () {
               t.disableAfter,
               t.dateFormat || "YYYY-MM-DD"
             )),
-            NepaliFunctions.CompareBsDates(M, v) ||
+              NepaliFunctions.CompareBsDates(M, v) ||
               ((g = M.year), (A = M.month)));
         }
         d(g, A, "", t.id);
@@ -1728,7 +1728,7 @@ var NepaliFunctions = (function () {
     "undefined" != typeof module && module.hasOwnProperty("exports")
       ? (module.exports = nepaliDatePicker)
       : Object.defineProperty(Object.prototype, "nepaliDatePicker", {
-          enumerable: !1,
-          value: nepaliDatePicker,
-        });
+        enumerable: !1,
+        value: nepaliDatePicker,
+      });
 })();
